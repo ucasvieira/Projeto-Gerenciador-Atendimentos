@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "api": "json-server --watch db.json --port 3000",
-    "start": "node server.js"
+    "start": "node server.cjs"
   },
   "dependencies": {
     "react": "^19.2.5",

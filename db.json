@@ -1,13 +1,6 @@
 {
   "atendimentos": [
     {
-      "id": "1",
-      "cliente": "Clínica Odonto Vida",
-      "whatsapp": "+5511987654321",
-      "problema": "Bot de triagem não está respondendo após as 18h",
-      "status": "Aberto"
-    },
-    {
       "id": "2",
       "cliente": "Pizzaria Napoli",
       "whatsapp": "+5511976543210",
