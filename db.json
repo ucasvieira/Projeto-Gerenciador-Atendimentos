@@ -1,0 +1,46 @@
+{
+  "atendimentos": [
+    {
+      "id": "1",
+      "cliente": "Clínica Odonto Vida",
+      "whatsapp": "+5511987654321",
+      "problema": "Bot de triagem não está respondendo após as 18h",
+      "status": "Aberto"
+    },
+    {
+      "id": "2",
+      "cliente": "Pizzaria Napoli",
+      "whatsapp": "+5511976543210",
+      "problema": "Como alterar a mensagem automática de ausência?",
+      "status": "Resolvido"
+    },
+    {
+      "id": "3",
+      "cliente": "Contabilidade Silva",
+      "whatsapp": "+5511965432109",
+      "problema": "QR Code do aparelho está desconectando sozinho toda hora",
+      "status": "Aberto"
+    },
+    {
+      "id": "4",
+      "cliente": "Imobiliária Morumbi",
+      "whatsapp": "+5511954321098",
+      "problema": "Erro ao tentar enviar PDF de contrato pelo sistema",
+      "status": "Aberto"
+    },
+    {
+      "id": "5",
+      "cliente": "Autoescola Piloto",
+      "whatsapp": "+5511943210987",
+      "problema": "Dúvida sobre como adicionar um novo atendente na plataforma",
+      "status": "Resolvido"
+    },
+    {
+      "id": "6",
+      "cliente": "Mercadinho São José",
+      "whatsapp": "+5511932109876",
+      "problema": "Cliente relata que as mensagens estão chegando duplicadas",
+      "status": "Aberto"
+    }
+  ]
+}
