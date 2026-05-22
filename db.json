@@ -1,13 +1,6 @@
 {
   "atendimentos": [
     {
-      "id": "2",
-      "cliente": "Pizzaria Napoli",
-      "whatsapp": "+5511976543210",
-      "problema": "Como alterar a mensagem automática de ausência?",
-      "status": "Resolvido"
-    },
-    {
       "id": "3",
       "cliente": "Contabilidade Silva",
       "whatsapp": "+5511965432109",

@@ -15,6 +15,10 @@ export default function App() {
     carregarAtendimentos();
   }, []);
 
+  const totalAtendimentos = atendimentos.length;
+  const chamadosAbertos = atendimentos.filter((atendimento) => atendimento.status === "Aberto").length;
+  const chamadosResolvidos = totalAtendimentos - chamadosAbertos;
+
   async function carregarAtendimentos() {
     try {
       const res = await fetch(URL);
@@ -59,116 +63,179 @@ export default function App() {
     carregarAtendimentos(); 
   }
 
-  // --- ESTILOS REUTILIZÁVEIS ---
-  const inputStyle = {
-    padding: "12px",
-    borderRadius: "6px",
-    border: "1px solid #ced4da",
-    fontSize: "15px",
-    outline: "none"
-  };
-
-  const btnStyle = {
-    padding: "10px 15px",
-    borderRadius: "6px",
-    border: "none",
-    fontWeight: "bold",
-    cursor: "pointer",
-    fontSize: "14px",
-    transition: "background 0.2s"
-  };
-
   return (
-    <div style={{ backgroundColor: "#f4f7f6", minHeight: "100vh", padding: "40px 20px", fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif", color: "#333" }}>
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        
-        <h1 style={{ textAlign: "center", color: "#2c3e50", marginBottom: "30px", fontSize: "28px" }}>
-          Gerenciador de Atendimentos
-        </h1>
+    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
+      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-28 -left-20 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
 
-        {/* CARTÃO DO FORMULÁRIO */}
-        <div style={{ backgroundColor: "white", padding: "25px", borderRadius: "10px", boxShadow: "0 4px 6px rgba(0,0,0,0.05)", marginBottom: "35px" }}>
-          <h2 style={{ marginTop: "0", fontSize: "18px", color: "#495057", marginBottom: "20px", borderBottom: "2px solid #f0f2f5", paddingBottom: "10px" }}>
-            Abrir Novo Chamado
-          </h2>
-          <form onSubmit={adicionar} style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-            <div style={{ display: "flex", gap: "15px" }}>
-              <input placeholder="Nome do Cliente" value={form.cliente} onChange={(e) => setForm({ ...form, cliente: e.target.value })} required style={{ ...inputStyle, flex: 1 }} />
-              <input placeholder="WhatsApp (ex: 11999999999)" value={form.whatsapp} onChange={(e) => setForm({ ...form, whatsapp: e.target.value })} style={{ ...inputStyle, flex: 1 }} />
-            </div>
-            <input placeholder="Descrição detalhada do Problema" value={form.problema} onChange={(e) => setForm({ ...form, problema: e.target.value })} required style={inputStyle} />
-            <button type="submit" style={{ ...btnStyle, backgroundColor: "#0d6efd", color: "white", marginTop: "5px", padding: "14px" }}>
-              + Registrar Atendimento
-            </button>
-          </form>
-        </div>
-        
-        {/* LISTA DE CHAMADOS */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-          <h2 style={{ fontSize: "20px", color: "#2c3e50", margin: "0 0 10px 0" }}>Fila de Atendimentos</h2>
-          
-          {atendimentos.length === 0 && (
-            <div style={{ textAlign: "center", padding: "40px", backgroundColor: "white", borderRadius: "10px", color: "#6c757d" }}>
-              Nenhum chamado na fila. Tudo tranquilo por aqui! 🎉
-            </div>
-          )}
-          
-          {atendimentos.map((chamado) => (
-            <div key={chamado.id} style={{ 
-              backgroundColor: "white", 
-              padding: "20px", 
-              borderRadius: "10px", 
-              boxShadow: "0 2px 4px rgba(0,0,0,0.04)", 
-              display: "flex", 
-              justifyContent: "space-between", 
-              alignItems: "center",
-              borderLeft: chamado.status === "Resolvido" ? "5px solid #198754" : "5px solid #ffc107",
-              opacity: chamado.status === "Resolvido" ? "0.8" : "1"
-            }}>
-              
-              {/* DADOS DO CHAMADO */}
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
-                  <h3 style={{ margin: "0", fontSize: "18px", color: "#212529" }}>{chamado.cliente}</h3>
-                  <span style={{ color: "#6c757d", fontSize: "14px" }}>📱 {chamado.whatsapp}</span>
-                  
-                  {/* BADGE DE STATUS */}
-                  <span style={{ 
-                    padding: "4px 10px", 
-                    borderRadius: "12px", 
-                    fontSize: "12px", 
-                    fontWeight: "bold", 
-                    textTransform: "uppercase",
-                    backgroundColor: chamado.status === "Resolvido" ? "#d1e7dd" : "#fff3cd",
-                    color: chamado.status === "Resolvido" ? "#0f5132" : "#856404",
-                  }}>
-                    {chamado.status}
-                  </span>
-                </div>
-                
-                <p style={{ margin: "0", color: "#495057", fontSize: "15px", lineHeight: "1.4" }}>
-                  <strong>Motivo:</strong> {chamado.problema}
+      <main className="relative mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+        <section className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur-xl sm:p-8">
+          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+            <div className="space-y-5">
+              <span className="inline-flex w-fit items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">
+                Central de suporte
+              </span>
+
+              <div className="space-y-4">
+                <h1 className="max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+                  Gerenciador de Atendimentos
+                </h1>
+                <p className="max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+                  Organize chamados, acompanhe o que está aberto e resolva solicitações com uma interface mais limpa, moderna e responsiva.
                 </p>
               </div>
+
               
-              {/* AÇÕES */}
-              <div style={{ display: "flex", gap: "10px" }}>
-                <button 
-                  onClick={() => atualizarStatus(chamado)} 
-                  style={{ ...btnStyle, backgroundColor: chamado.status === "Aberto" ? "#198754" : "#ffc107", color: chamado.status === "Aberto" ? "white" : "#000" }}
-                >
-                  {chamado.status === "Aberto" ? "✔ Resolver" : "↺ Reabrir"}
-                </button>
-
-                <button onClick={() => remover(chamado.id)} style={{ ...btnStyle, backgroundColor: "#dc3545", color: "white" }}>
-                  ✖ Excluir
-                </button>
-              </div>
             </div>
-          ))}
-        </div>
 
-      </div>
+            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              <article className="rounded-2xl border border-white/10 bg-white/8 p-5">
+                <span className="text-sm text-slate-400">Total</span>
+                <strong className="mt-2 block text-3xl font-black text-white">{totalAtendimentos}</strong>
+              </article>
+
+              <article className="rounded-2xl border border-amber-400/20 bg-amber-400/10 p-5">
+                <span className="text-sm text-amber-100/80">Abertos</span>
+                <strong className="mt-2 block text-3xl font-black text-white">{chamadosAbertos}</strong>
+              </article>
+
+              <article className="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-5">
+                <span className="text-sm text-emerald-100/80">Resolvidos</span>
+                <strong className="mt-2 block text-3xl font-black text-white">{chamadosResolvidos}</strong>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid gap-6 lg:grid-cols-[420px_minmax(0,1fr)]">
+          <div className="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-xl shadow-slate-950/30 backdrop-blur-xl">
+            <div className="mb-6 flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">Novo chamado</p>
+                <h2 className="mt-2 text-2xl font-bold text-white">Abrir atendimento</h2>
+              </div>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+                Preencha os dados principais
+              </span>
+            </div>
+
+            <form onSubmit={adicionar} className="space-y-4">
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                <label className="space-y-2">
+                  <span className="text-sm font-medium text-slate-200">Cliente</span>
+                  <input
+                    className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10"
+                    placeholder="Nome do cliente"
+                    value={form.cliente}
+                    onChange={(e) => setForm({ ...form, cliente: e.target.value })}
+                    required
+                  />
+                </label>
+
+                <label className="space-y-2">
+                  <span className="text-sm font-medium text-slate-200">WhatsApp</span>
+                  <input
+                    className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-slate-100 outline-none transition focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10"
+                    placeholder="(11) 99999-9999"
+                    value={form.whatsapp}
+                    onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
+                  />
+                </label>
+              </div>
+
+              <label className="block space-y-2">
+                <span className="text-sm font-medium text-slate-200">Problema</span>
+                <textarea
+                  className="min-h-36 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10"
+                  placeholder="Descreva o problema com o máximo de contexto possível"
+                  value={form.problema}
+                  onChange={(e) => setForm({ ...form, problema: e.target.value })}
+                  required
+                  rows={5}
+                />
+              </label>
+
+              <button
+                type="submit"
+                className="inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-3.5 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:shadow-cyan-500/30 focus:outline-none focus:ring-4 focus:ring-cyan-400/20"
+              >
+                Registrar atendimento
+              </button>
+            </form>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-xl shadow-slate-950/30 backdrop-blur-xl">
+            <div className="mb-6 flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">Fila ativa</p>
+                <h2 className="mt-2 text-2xl font-bold text-white">Atendimentos em andamento</h2>
+              </div>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+                Atualize, resolva ou remova chamados
+              </span>
+            </div>
+
+            <div className="space-y-4">
+              {atendimentos.length === 0 && (
+                <div className="rounded-2xl border border-dashed border-white/15 bg-white/5 p-8 text-center text-slate-300">
+                  <strong className="block text-white">Sem chamados na fila</strong>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    Assim que um novo atendimento entrar, ele aparecerá aqui.
+                  </p>
+                </div>
+              )}
+
+              {atendimentos.map((chamado) => {
+                const resolvido = chamado.status === "Resolvido";
+
+                return (
+                  <article
+                    key={chamado.id}
+                    className={`rounded-2xl border border-white/10 p-5 shadow-lg shadow-slate-950/20 transition hover:-translate-y-0.5 hover:border-cyan-400/20 ${resolvido ? "bg-emerald-500/10" : "bg-white/5"}`}
+                  >
+                    <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-center gap-3">
+                          <h3 className="text-lg font-bold text-white">{chamado.cliente}</h3>
+                          <span
+                            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] ${resolvido ? "bg-emerald-400/15 text-emerald-200" : "bg-amber-400/15 text-amber-200"}`}
+                          >
+                            {chamado.status}
+                          </span>
+                        </div>
+
+                        <p className="mt-2 text-sm text-slate-400">
+                          WhatsApp: {chamado.whatsapp || "Não informado"}
+                        </p>
+
+                        <p className="mt-3 text-sm leading-7 text-slate-200">
+                          {chamado.problema}
+                        </p>
+                      </div>
+
+                      <div className="grid gap-2 sm:grid-cols-2 xl:w-44 xl:grid-cols-1">
+                        <button
+                          onClick={() => atualizarStatus(chamado)}
+                          className={`inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 focus:outline-none focus:ring-4 ${resolvido ? "bg-amber-500 shadow-amber-500/20 focus:ring-amber-400/20" : "bg-emerald-500 shadow-emerald-500/20 focus:ring-emerald-400/20"}`}
+                        >
+                          {resolvido ? "Reabrir" : "Resolver"}
+                        </button>
+
+                        <button
+                          onClick={() => remover(chamado.id)}
+                          className="inline-flex items-center justify-center rounded-xl bg-rose-500 px-4 py-3 text-sm font-semibold text-white shadow-rose-500/20 transition hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-rose-400/20"
+                        >
+                          Excluir
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
