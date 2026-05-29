@@ -5,35 +5,646 @@
       "cliente": "Contabilidade Silva",
       "whatsapp": "+5511965432109",
       "problema": "QR Code do aparelho está desconectando sozinho toda hora",
-      "status": "Aberto"
+      "status": "Aberto",
+      "prioridade": "Alta",
+      "categoria": "Suporte",
+      "responsavel": "Lucas",
+      "observacoes": "Cliente relatou falha recorrente após reiniciar o celular.",
+      "criadoEm": "2026-05-29T09:10:00.000Z",
+      "atualizadoEm": "2026-05-29T09:10:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h3-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T09:10:00.000Z"
+        }
+      ]
     },
     {
       "id": "4",
       "cliente": "Imobiliária Morumbi",
       "whatsapp": "+5511954321098",
       "problema": "Erro ao tentar enviar PDF de contrato pelo sistema",
-      "status": "Aberto"
+      "status": "Em andamento",
+      "prioridade": "Urgente",
+      "categoria": "Integração",
+      "responsavel": "Marina",
+      "observacoes": "Problema ocorre apenas no navegador Safari.",
+      "criadoEm": "2026-05-29T08:45:00.000Z",
+      "atualizadoEm": "2026-05-29T11:15:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h4-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T08:45:00.000Z"
+        },
+        {
+          "id": "h4-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Em andamento",
+          "data": "2026-05-29T11:15:00.000Z"
+        }
+      ]
     },
     {
       "id": "5",
       "cliente": "Autoescola Piloto",
       "whatsapp": "+5511943210987",
       "problema": "Dúvida sobre como adicionar um novo atendente na plataforma",
-      "status": "Resolvido"
+      "status": "Resolvido",
+      "prioridade": "Média",
+      "categoria": "Treinamento",
+      "responsavel": "Carlos",
+      "observacoes": "Orientado por videochamada e enviado passo a passo por WhatsApp.",
+      "criadoEm": "2026-05-27T14:00:00.000Z",
+      "atualizadoEm": "2026-05-27T16:20:00.000Z",
+      "resolvidoEm": "2026-05-27T16:20:00.000Z",
+      "historico": [
+        {
+          "id": "h5-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-27T14:00:00.000Z"
+        },
+        {
+          "id": "h5-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Resolvido",
+          "data": "2026-05-27T16:20:00.000Z"
+        }
+      ]
     },
     {
       "id": "6",
       "cliente": "Mercadinho São José",
       "whatsapp": "+5511932109876",
       "problema": "Cliente relata que as mensagens estão chegando duplicadas",
-      "status": "Aberto"
+      "status": "Aberto",
+      "prioridade": "Alta",
+      "categoria": "Geral",
+      "responsavel": "Ana",
+      "observacoes": "Monitorar duplicidade após reconexão do dispositivo.",
+      "criadoEm": "2026-05-28T10:05:00.000Z",
+      "atualizadoEm": "2026-05-29T07:30:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h6-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-28T10:05:00.000Z"
+        },
+        {
+          "id": "h6-2",
+          "tipo": "update",
+          "descricao": "Dispositivo reiniciado para validação",
+          "data": "2026-05-29T07:30:00.000Z"
+        }
+      ]
     },
     {
+      "id": "7",
+      "cliente": "Clínica Bem Viver",
+      "whatsapp": "+5511976543210",
+      "problema": "Não está gerando boleto para pacientes com convênio",
+      "status": "Em andamento",
+      "prioridade": "Urgente",
+      "categoria": "Financeiro",
+      "responsavel": "Paula",
+      "observacoes": "Validar integração com gateway de pagamento.",
+      "criadoEm": "2026-05-29T08:15:00.000Z",
+      "atualizadoEm": "2026-05-29T12:40:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h7-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T08:15:00.000Z"
+        },
+        {
+          "id": "h7-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Em andamento",
+          "data": "2026-05-29T12:40:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "cliente": "Distribuidora Vanguarda",
+      "whatsapp": "+5511988881122",
+      "problema": "Aplicativo não sincroniza pedidos após atualização do sistema",
+      "status": "Resolvido",
+      "prioridade": "Alta",
+      "categoria": "Integração",
+      "responsavel": "Rafael",
+      "observacoes": "Correção aplicada após limpeza de cache e reautenticação.",
+      "criadoEm": "2026-05-26T09:30:00.000Z",
+      "atualizadoEm": "2026-05-26T17:05:00.000Z",
+      "resolvidoEm": "2026-05-26T17:05:00.000Z",
+      "historico": [
+        {
+          "id": "h8-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-26T09:30:00.000Z"
+        },
+        {
+          "id": "h8-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Resolvido",
+          "data": "2026-05-26T17:05:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "cliente": "Pet Shop Amigo Bicho",
+      "whatsapp": "+5511970011223",
+      "problema": "Pedido de treinamento para uso do painel de estoque",
+      "status": "Aberto",
+      "prioridade": "Baixa",
+      "categoria": "Treinamento",
+      "responsavel": "Fernanda",
+      "observacoes": "Agendar sessão com equipe da tarde.",
+      "criadoEm": "2026-05-29T10:30:00.000Z",
+      "atualizadoEm": "2026-05-29T10:30:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h9-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T10:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "cliente": "Restaurante Solar",
+      "whatsapp": "+5511998765432",
+      "problema": "Pedidos do delivery não aparecem no painel principal",
+      "status": "Em andamento",
+      "prioridade": "Urgente",
+      "categoria": "Suporte",
+      "responsavel": "Diego",
+      "observacoes": "Falha intermitente em horário de pico.",
+      "criadoEm": "2026-05-29T07:55:00.000Z",
+      "atualizadoEm": "2026-05-29T13:20:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h10-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T07:55:00.000Z"
+        },
+        {
+          "id": "h10-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Em andamento",
+          "data": "2026-05-29T13:20:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "cliente": "Escritório Alfa",
+      "whatsapp": "+5511944455566",
+      "problema": "Usuário não consegue redefinir senha pelo link enviado",
+      "status": "Resolvido",
+      "prioridade": "Média",
+      "categoria": "Suporte",
+      "responsavel": "Camila",
+      "observacoes": "Link estava expirando em 5 minutos. Ajustado para 30.",
+      "criadoEm": "2026-05-25T11:40:00.000Z",
+      "atualizadoEm": "2026-05-25T12:30:00.000Z",
+      "resolvidoEm": "2026-05-25T12:30:00.000Z",
+      "historico": [
+        {
+          "id": "h11-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-25T11:40:00.000Z"
+        },
+        {
+          "id": "h11-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Resolvido",
+          "data": "2026-05-25T12:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "cliente": "Loja Conecta",
+      "whatsapp": "+5511933344455",
+      "problema": "Erro ao cadastrar novo produto com variação de tamanho",
+      "status": "Aberto",
+      "prioridade": "Média",
+      "categoria": "Geral",
+      "responsavel": "João",
+      "observacoes": "Cliente enviou print do erro pelo WhatsApp.",
+      "criadoEm": "2026-05-29T06:40:00.000Z",
+      "atualizadoEm": "2026-05-29T06:40:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h12-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T06:40:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "cliente": "Construtora Horizonte",
+      "whatsapp": "+5511987654321",
+      "problema": "Integração com envio de PDF de propostas está falhando",
+      "status": "Em andamento",
+      "prioridade": "Alta",
+      "categoria": "Integração",
+      "responsavel": "Bruno",
+      "observacoes": "Verificar certificado e endpoint do servidor.",
+      "criadoEm": "2026-05-28T15:10:00.000Z",
+      "atualizadoEm": "2026-05-29T09:50:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h13-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-28T15:10:00.000Z"
+        },
+        {
+          "id": "h13-2",
+          "tipo": "update",
+          "descricao": "Teste de integração em andamento",
+          "data": "2026-05-29T09:50:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "cliente": "Mercado Central",
+      "whatsapp": "+5511912345678",
+      "problema": "Totem de atendimento não imprime senhas",
+      "status": "Aberto",
+      "prioridade": "Urgente",
+      "categoria": "Suporte",
+      "responsavel": "Marcos",
+      "observacoes": "Impactando fila presencial.",
+      "criadoEm": "2026-05-29T09:05:00.000Z",
+      "atualizadoEm": "2026-05-29T09:05:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h14-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T09:05:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "cliente": "Academia Corpo Ativo",
+      "whatsapp": "+5511980011223",
+      "problema": "Conseguiu cadastrar alunos, mas não encontra relatório mensal",
+      "status": "Resolvido",
+      "prioridade": "Baixa",
+      "categoria": "Treinamento",
+      "responsavel": "Juliana",
+      "observacoes": "Foi mostrado o caminho na dashboard e enviado tutorial.",
+      "criadoEm": "2026-05-24T13:15:00.000Z",
+      "atualizadoEm": "2026-05-24T14:00:00.000Z",
+      "resolvidoEm": "2026-05-24T14:00:00.000Z",
+      "historico": [
+        {
+          "id": "h15-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-24T13:15:00.000Z"
+        },
+        {
+          "id": "h15-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Resolvido",
+          "data": "2026-05-24T14:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "cliente": "Ótica Visão+",
+      "whatsapp": "+5511977008899",
+      "problema": "Registro de pedidos retorna mensagem de sessão expirada",
+      "status": "Em andamento",
+      "prioridade": "Alta",
+      "categoria": "Geral",
+      "responsavel": "Fernanda",
+      "observacoes": "Cliente usa múltiplos navegadores ao mesmo tempo.",
+      "criadoEm": "2026-05-28T17:25:00.000Z",
+      "atualizadoEm": "2026-05-29T10:15:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h16-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-28T17:25:00.000Z"
+        },
+        {
+          "id": "h16-2",
+          "tipo": "update",
+          "descricao": "Sessão analisada e reproduzida internamente",
+          "data": "2026-05-29T10:15:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "cliente": "Papelaria Criativa",
+      "whatsapp": "+5511991122334",
+      "problema": "Não consegue alterar banner da página inicial",
+      "status": "Aberto",
+      "prioridade": "Baixa",
+      "categoria": "Suporte",
+      "responsavel": "Paula",
+      "observacoes": "Parece ser apenas questão de permissão de usuário.",
+      "criadoEm": "2026-05-29T11:05:00.000Z",
+      "atualizadoEm": "2026-05-29T11:05:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h17-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T11:05:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "cliente": "Transportadora Rota Certa",
+      "whatsapp": "+5511976548890",
+      "problema": "Falha ao importar lista de entregas via planilha CSV",
+      "status": "Em andamento",
+      "prioridade": "Alta",
+      "categoria": "Integração",
+      "responsavel": "Diego",
+      "observacoes": "Validar separador e codificação do arquivo.",
+      "criadoEm": "2026-05-29T08:05:00.000Z",
+      "atualizadoEm": "2026-05-29T12:05:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h18-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T08:05:00.000Z"
+        },
+        {
+          "id": "h18-2",
+          "tipo": "update",
+          "descricao": "CSV enviado para análise",
+          "data": "2026-05-29T12:05:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "cliente": "Escola Nova Geração",
+      "whatsapp": "+5511960011224",
+      "problema": "Professor não consegue visualizar turmas cadastradas",
+      "status": "Resolvido",
+      "prioridade": "Média",
+      "categoria": "Suporte",
+      "responsavel": "Camila",
+      "observacoes": "Correção foi realizada por troca de perfil de acesso.",
+      "criadoEm": "2026-05-23T10:20:00.000Z",
+      "atualizadoEm": "2026-05-23T11:10:00.000Z",
+      "resolvidoEm": "2026-05-23T11:10:00.000Z",
+      "historico": [
+        {
+          "id": "h19-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-23T10:20:00.000Z"
+        },
+        {
+          "id": "h19-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Resolvido",
+          "data": "2026-05-23T11:10:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "cliente": "Farmácia Popular",
+      "whatsapp": "+5511987744556",
+      "problema": "Relatório de vendas do dia apresenta totais incorretos",
+      "status": "Aberto",
+      "prioridade": "Urgente",
+      "categoria": "Financeiro",
+      "responsavel": "Rafael",
+      "observacoes": "Pico de vendas com divergência apenas em uma filial.",
+      "criadoEm": "2026-05-29T09:40:00.000Z",
+      "atualizadoEm": "2026-05-29T09:40:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h20-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T09:40:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "cliente": "Laboratório Vida",
+      "whatsapp": "+5511977002233",
+      "problema": "Paciente recebe mensagem de erro ao confirmar agendamento",
+      "status": "Em andamento",
+      "prioridade": "Alta",
+      "categoria": "Integração",
+      "responsavel": "Marina",
+      "observacoes": "Conferindo integração com agenda externa.",
+      "criadoEm": "2026-05-27T16:50:00.000Z",
+      "atualizadoEm": "2026-05-29T08:25:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h21-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-27T16:50:00.000Z"
+        },
+        {
+          "id": "h21-2",
+          "tipo": "update",
+          "descricao": "Integração em análise com o fornecedor",
+          "data": "2026-05-29T08:25:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "cliente": "Consultório Sorriso",
+      "whatsapp": "+5511995500112",
+      "problema": "Sistema abre, mas tela de prontuário fica em branco",
+      "status": "Aberto",
+      "prioridade": "Alta",
+      "categoria": "Suporte",
+      "responsavel": "Lucas",
+      "observacoes": "Suspeita de erro após atualização do navegador.",
+      "criadoEm": "2026-05-29T12:10:00.000Z",
+      "atualizadoEm": "2026-05-29T12:10:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h22-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T12:10:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "cliente": "Ateliê Brisa",
+      "whatsapp": "+5511983344110",
+      "problema": "Cliente quer aprender a cadastrar formas de pagamento",
+      "status": "Resolvido",
+      "prioridade": "Baixa",
+      "categoria": "Treinamento",
+      "responsavel": "Ana",
+      "observacoes": "Capacitação concluída no final do expediente.",
+      "criadoEm": "2026-05-22T09:00:00.000Z",
+      "atualizadoEm": "2026-05-22T10:05:00.000Z",
+      "resolvidoEm": "2026-05-22T10:05:00.000Z",
+      "historico": [
+        {
+          "id": "h23-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-22T09:00:00.000Z"
+        },
+        {
+          "id": "h23-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Resolvido",
+          "data": "2026-05-22T10:05:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "cliente": "Hotel Bela Vista",
+      "whatsapp": "+5511967788990",
+      "problema": "Mensagens automáticas de confirmação não estão sendo enviadas",
+      "status": "Em andamento",
+      "prioridade": "Urgente",
+      "categoria": "Integração",
+      "responsavel": "Bruno",
+      "observacoes": "Impacta reservas do fim de semana.",
+      "criadoEm": "2026-05-29T07:20:00.000Z",
+      "atualizadoEm": "2026-05-29T13:05:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h24-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T07:20:00.000Z"
+        },
+        {
+          "id": "h24-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Em andamento",
+          "data": "2026-05-29T13:05:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "cliente": "Agência Criar",
+      "whatsapp": "+5511996600778",
+      "problema": "Solicitação de ajuste visual no dashboard do cliente",
+      "status": "Aberto",
+      "prioridade": "Baixa",
+      "categoria": "Geral",
+      "responsavel": "Juliana",
+      "observacoes": "Aguardando aprovação de layout.",
+      "criadoEm": "2026-05-29T11:30:00.000Z",
+      "atualizadoEm": "2026-05-29T11:30:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h25-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T11:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "cliente": "Clube Horizonte Azul",
+      "whatsapp": "+5511978800991",
+      "problema": "Usuários reclamam que mensagens chegam com atraso",
+      "status": "Resolvido",
+      "prioridade": "Média",
+      "categoria": "Suporte",
+      "responsavel": "Diego",
+      "observacoes": "Fila normalizada após ajuste de webhook.",
+      "criadoEm": "2026-05-21T14:25:00.000Z",
+      "atualizadoEm": "2026-05-21T15:45:00.000Z",
+      "resolvidoEm": "2026-05-21T15:45:00.000Z",
+      "historico": [
+        {
+          "id": "h26-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-21T14:25:00.000Z"
+        },
+        {
+          "id": "h26-2",
+          "tipo": "status",
+          "descricao": "Status alterado para Resolvido",
+          "data": "2026-05-21T15:45:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "TYT3oE6",
       "cliente": "teste",
       "whatsapp": "(11) 11111-1111",
       "problema": "adwadw",
       "status": "Aberto",
-      "id": "TYT3oE6"
+      "prioridade": "Média",
+      "categoria": "Geral",
+      "responsavel": "",
+      "observacoes": "",
+      "criadoEm": "2026-05-29T12:55:00.000Z",
+      "atualizadoEm": "2026-05-29T12:55:00.000Z",
+      "resolvidoEm": null,
+      "historico": [
+        {
+          "id": "h27-1",
+          "tipo": "create",
+          "descricao": "Atendimento criado",
+          "data": "2026-05-29T12:55:00.000Z"
+        }
+      ]
     }
   ]
 }
