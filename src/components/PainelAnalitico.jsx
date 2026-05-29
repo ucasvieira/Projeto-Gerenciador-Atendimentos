@@ -172,7 +172,6 @@ export default function PainelAnalitico({
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">Visão rápida</p>
           <div className="mt-4 space-y-3 text-sm leading-7 text-slate-300">
             <p>Os gráficos mostram a distribuição por status, as categorias mais comuns e a tendência dos últimos 7 dias.</p>
-            <p>Se quiser, o próximo passo natural é adicionar SLA por prioridade ou um gráfico por cliente.</p>
           </div>
         </div>
       </section>
